@@ -4,8 +4,9 @@ import { Navbar, Nav } from 'react-bootstrap';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import { BrowserRouter as Router, Route, Link } from "react-router-dom";
 import Aeronave from '../Content/Aeronave';
+import ListVue from '../Content/ListaVuelos';
 
-const header = () => {
+function header() {
     return (
         <Router>
             <div>
@@ -15,14 +16,15 @@ const header = () => {
                         <Navbar.Toggle aria-controls="basic-navbar-nav" />
                         <Navbar.Collapse id="basic-navbar-nav">
                             <Nav className="mr-auto">
-                                <Nav.Link to="/">Página Principal</Nav.Link>
+                                <Link to="/">Página Principal</Link>
                                 <Nav.Link to="/ct">Compra de tickets</Nav.Link>
                                 <Nav.Link to="/calendar">Calendario de vuelos</Nav.Link>
-                                <Nav.Link to="/listaAero">Lista de Aeronaves y disponibilidad de butacas</Nav.Link>
+                                <Link to="/ListaDeAeronaves">Lista de Aeronaves y disponibilidad de butacas</Link>
                             </Nav>
                         </Navbar.Collapse>
                     </Navbar>
-                    <Route path="/listaAero" exact component={Aeronave} />
+                    <Route path="/" exact component={ListVue}/>
+                    <Route path="/ListaDeAeronaves" exact component={Aeronave} />
                 </div>
             </div>
         </Router>

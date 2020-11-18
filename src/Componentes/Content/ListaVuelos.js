@@ -23,11 +23,15 @@ function Content() {
 
     return (
         <div>
+            <h1>Proximos vuelos</h1>
             <table className="table table-bordered">
                 <thead>
                     <tr>
-                        <th>Aeronave ID</th>
-                        <th>Modelo</th>
+                        <th>Pais Salida</th>
+                        <th>Pais Destino</th>
+                        <th>Hora salida</th>
+                        <th>Hora Llegada</th>
+                        <th>Aeronave</th>
                     </tr>
                 </thead>
                 <tbody>
