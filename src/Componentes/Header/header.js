@@ -5,6 +5,7 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 import { BrowserRouter as Router, Route, Link } from "react-router-dom";
 import Aeronave from '../Content/Aeronave';
 import ListVue from '../Content/ListaVuelos';
+import Butaca from '../Content/Butaca';
 
 function header() {
     return (
@@ -20,11 +21,13 @@ function header() {
                                 <Nav.Link to="/ct">Compra de tickets</Nav.Link>
                                 <Nav.Link to="/calendar">Calendario de vuelos</Nav.Link>
                                 <Link to="/ListaDeAeronaves">Lista de Aeronaves y disponibilidad de butacas</Link>
+                                <Link to="/ListaButacas">Lista de butacas</Link>
                             </Nav>
                         </Navbar.Collapse>
                     </Navbar>
                     <Route path="/" exact component={ListVue}/>
                     <Route path="/ListaDeAeronaves" exact component={Aeronave} />
+                    <Route path="/ListaButacas" exact component={Butaca} />
                 </div>
             </div>
         </Router>

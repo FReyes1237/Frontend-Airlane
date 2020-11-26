@@ -4,7 +4,6 @@ import react, { useEffect, useState } from 'react';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import Header from './Componentes/Header/header';
 import Footer from './Componentes/Footer/footer';
-import ListVuel from './Componentes/Content/ListaVuelos';
 
 function App() {
   return (
