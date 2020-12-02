@@ -1,7 +1,7 @@
-.navbar-light .navbar-nav .nav-link {
-    color: white !important;   
+.navbar-custom {
+    background-color: #005589;
 }
 
-.navbar-light .navbar-brand {
-    color: white !important;
+.navbar-custom .navbar-brand, .navbar-custom .navbar-text { 
+    color: white;
 }
