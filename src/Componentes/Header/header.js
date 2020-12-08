@@ -7,7 +7,10 @@ import Aeronave from '../Content/Aeronave';
 import Butaca from '../Content/Butaca';
 import CViaje from '../Content/ClaseViaje';
 import Vuelo from '../Content/Vuelo';
-import Factura from '../Content/Factura';
+import Factura from '../Content/FacturaReserva';
+import Reserva from '../Content/Reserva';
+import Politica from '../Content/Politica';
+import ButacaNueva from '../Content/ButacaNueva';
 
 function header() {
     return (
@@ -20,6 +23,7 @@ function header() {
                     <Link className="navbar-text" to="/LVuelo">Lista de vuelos&nbsp;&nbsp;</Link>
                     <Link className="navbar-text" to="/ListaButacas">Lista de butacas&nbsp;&nbsp;</Link>
                     <Link className="navbar-text" to="/CVuelo">Categorias de vuelo&nbsp;&nbsp;</Link>
+                    <Link className="navbar-text" to="/Reservar">Reservar pasaje&nbsp;&nbsp;</Link>
                     <Link className="navbar-text" to="/Facturar">Comprar pasaje&nbsp;&nbsp;</Link>
                 </Nav>
             </Navbar>
@@ -29,6 +33,9 @@ function header() {
             <Route path="/CVuelo" exact component={CViaje} />
             <Route path="/LVuelo" exact component={Vuelo} />
             <Route path="/Facturar" exact component={Factura} />
+            <Route path="/Reservar" exact component={Reserva} />
+            <Route path="/politica" exact component={Politica} />
+            <Route path="/ButacaNueva" exact component={ButacaNueva} />
         </Router>
     );
 };
