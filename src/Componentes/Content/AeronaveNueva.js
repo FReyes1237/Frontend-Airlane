@@ -14,7 +14,7 @@ import TableRow from '@material-ui/core/TableRow';
 import Paper from '@material-ui/core/Paper';
 import { withStyles } from '@material-ui/core/styles';
 import { BrowserRouter as Router, Route, Link } from "react-router-dom";
-import { guardarButaca } from '../../Actions/ButacaAction';
+import { guardarAeronave } from '../../Actions/AeronaveAction';
 
 function Content() {
 
@@ -36,30 +36,29 @@ function Content() {
         },
     }))(TableRow);
 
-    const [butaca, setButaca] = useState({
-        butacaID: '',
+    const [aeronave, setAeronave] = useState({
         aeronaveID: '',
-        claseViajeID: '',
-        estadoButacaID: ''
+        modelo: ''
     });
 
     const ingresarValoresMemoria = e => {
         const { name, value } = e.target;
-        setButaca(anterior => ({
+        setAeronave(anterior => ({
             ...anterior,
             [name]: value
         }))
     }
 
-    const nuevaButacaBoton = e => {
+    const nuevaAeronaveBoton = e => {
         e.preventDefault();
-        guardarButaca(butaca).then(response => {
+        guardarAeronave(aeronave).then(response => {
             swal({
                 title: "Felicidades!",
                 text: "Guardado exitoso",
                 icon: "https://i.pinimg.com/originals/d2/f3/8a/d2f38a05e3f36e1f7c4a1a8fb1a18dfa.gif",
                 button: "Aceptar"
             });
+            window.localStorage.setItem('token_seguridad', response.data.token);
         })
     }
 
@@ -67,14 +66,12 @@ function Content() {
         <Container maxWidth="xs">
             <div style={styl.paper}>
                 <Typography component="h1" variant="h5">
-                    Nueva Butaca
+                    Nueva Aeronave
                 </Typography>
                 <form style={styl.form}>
-                    <TextField variant="outlined" label="Ingrese el numero de la butaca" name="butacaID" value={butaca.butacaID} onChange={ingresarValoresMemoria} fullWidth margin="normal" />
-                    <TextField variant="outlined" label="Ingrese el numero de la aeronave" name="aeronaveID" value={butaca.aeronaveID} onChange={ingresarValoresMemoria} fullWidth margin="normal" />
-                    <TextField variant="outlined" label="Ingrese la categoria de viaje" name="claseViajeID" value={butaca.claseViajeID} onChange={ingresarValoresMemoria} fullWidth margin="normal" />
-                    <TextField variant="outlined" label="Ingrese estado de la butaca" name="estadoButacaID" value={butaca.estadoButacaID} onChange={ingresarValoresMemoria} fullWidth margin="normal" />
-                    <Button type="submit" onClick={nuevaButacaBoton} fullWidth="contained" color="primary" style={styl.submit}>Guardar</Button>
+                    <TextField variant="outlined" label="Ingrese el numero de la aeronave" name="aeronaveID" value={aeronave.butacaID} onChange={ingresarValoresMemoria} fullWidth margin="normal" />
+                    <TextField variant="outlined" label="Ingrese el modelo de la aeronave" name="modelo" value={aeronave.aeronaveID} onChange={ingresarValoresMemoria} fullWidth margin="normal" />
+                    <Button type="submit" onClick={nuevaAeronaveBoton} fullWidth="contained" color="primary" style={styl.submit}>Guardar</Button>
                 </form>
             </div>
         </Container>

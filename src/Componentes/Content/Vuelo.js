@@ -11,6 +11,7 @@ import TableRow from '@material-ui/core/TableRow';
 import Paper from '@material-ui/core/Paper';
 import { withStyles, makeStyles } from '@material-ui/core/styles';
 import styl from '../Tools/Style';
+import { BrowserRouter as Router, Route, Link } from "react-router-dom";
 import { Container } from '@material-ui/core';
 
 function Content() {
@@ -74,6 +75,9 @@ function Content() {
                     </TableBody>
                 </Table>
             </TableContainer>
+            <router>
+                <Link className="navbar-text" to="/VueloNuevo" target="_self">Ingresar nuevo vuelo&nbsp;&nbsp;</Link>
+            </router>
         </Container>
     );
 };

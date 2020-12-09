@@ -7,10 +7,13 @@ import Aeronave from '../Content/Aeronave';
 import Butaca from '../Content/Butaca';
 import CViaje from '../Content/ClaseViaje';
 import Vuelo from '../Content/Vuelo';
-import Factura from '../Content/FacturaReserva';
+import Facturar from '../Content/FacturaReserva';
+import Factura from '../Content/Factura';
 import Reserva from '../Content/Reserva';
 import Politica from '../Content/Politica';
 import ButacaNueva from '../Content/ButacaNueva';
+import AeronaveNueva from '../Content/AeronaveNueva';
+import VueloNuevo from '../Content/VueloNuevo';
 
 function header() {
     return (
@@ -32,10 +35,13 @@ function header() {
             <Route path="/ListaButacas" exact component={Butaca} />
             <Route path="/CVuelo" exact component={CViaje} />
             <Route path="/LVuelo" exact component={Vuelo} />
-            <Route path="/Facturar" exact component={Factura} />
+            <Route path="/Facturar" exact component={Facturar} />
+            <Route path="/Factura" exact component={Factura} />
             <Route path="/Reservar" exact component={Reserva} />
             <Route path="/politica" exact component={Politica} />
             <Route path="/ButacaNueva" exact component={ButacaNueva} />
+            <Route path="/AeronaveNueva" exaact component={AeronaveNueva} />
+            <Route path="/VueloNuevo" exaact component={VueloNuevo} />
         </Router>
     );
 };

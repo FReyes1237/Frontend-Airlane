@@ -11,6 +11,7 @@ import TableRow from '@material-ui/core/TableRow';
 import Paper from '@material-ui/core/Paper';
 import { withStyles, makeStyles } from '@material-ui/core/styles';
 import styl from '../Tools/Style';
+import { BrowserRouter as Router, Route, Link } from "react-router-dom";
 import { Container } from '@material-ui/core';
 
 function Content() {
@@ -67,11 +68,13 @@ function Content() {
                                 </StyledTableCell>
                                 <StyledTableCell align="center">{Aeronave.modelo}</StyledTableCell>
                             </StyledTableRow>
-
                         ))}
                     </TableBody>
                 </Table>
             </TableContainer>
+            <router>
+                <Link className="navbar-text" to="/AeronaveNueva" target="_self">Ingresar nueva aeronave&nbsp;&nbsp;</Link>
+            </router>
         </Container>
     );
 };
