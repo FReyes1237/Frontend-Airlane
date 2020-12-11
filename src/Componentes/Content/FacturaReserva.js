@@ -7,6 +7,7 @@ import styl from '../Tools/Style';
 import { Container, Typography, Button, TextField, ListItem, ListItemText } from '@material-ui/core';
 import { withRouter } from 'react-router-dom';
 import Factura from '../Content/Factura';
+import { BrowserRouter as Router, Route, Link } from "react-router-dom";
 import { useHistory } from "react-router-dom";
 
 function Content() {
@@ -32,6 +33,9 @@ function Content() {
                     <Button type="submit" fullWidth="contained" color="primary" style={styl.submit}>Verificar</Button>
                 </form>
             </div>
+            <router>
+                <Link className="navbar-text" to="/Factura" target="_self">Verificar&nbsp;&nbsp;</Link>
+            </router>
         </Container>
     );
 };
