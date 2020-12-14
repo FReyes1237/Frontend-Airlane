@@ -14,6 +14,7 @@ import Politica from '../Content/Politica';
 import ButacaNueva from '../Content/ButacaNueva';
 import AeronaveNueva from '../Content/AeronaveNueva';
 import VueloNuevo from '../Content/VueloNuevo';
+import PruebaAIAIAI from '../Content/Prueba';
 
 function header() {
     return (
@@ -28,6 +29,7 @@ function header() {
                     <Link className="navbar-text" to="/CVuelo">Categorias de vuelo&nbsp;&nbsp;</Link>
                     <Link className="navbar-text" to="/Reservar">Reservar pasaje&nbsp;&nbsp;</Link>
                     <Link className="navbar-text" to="/Facturar">Comprar pasaje&nbsp;&nbsp;</Link>
+                    <Link className="navbar-text" to="/Prueba">Prueba</Link>
                 </Nav>
             </Navbar>
             <br></br>
@@ -42,6 +44,7 @@ function header() {
             <Route path="/ButacaNueva" exact component={ButacaNueva} />
             <Route path="/AeronaveNueva" exaact component={AeronaveNueva} />
             <Route path="/VueloNuevo" exaact component={VueloNuevo} />
+            <Route path="/Prueba" exact component={PruebaAIAIAI} />
         </Router>
     );
 };
